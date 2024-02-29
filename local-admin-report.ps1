@@ -4,10 +4,11 @@
 
 $report_file_unc = ""
 
+if(!(Test-Path -Path "C:\temp")){
+    New-Item -Path "C:\" -Name "temp" -ItemType "directory"
+}
+
 try {
-    if(!(Test-Path -Path "C:\temp")){
-        New-Item -Path "C:\" -Name "temp" -ItemType "directory"
-    }
 
     $local_admin_members = Get-LocalGroupMember -Group Administrators | Select-Object -Property name
 
