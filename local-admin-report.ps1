@@ -1,3 +1,7 @@
+#get local admin users on comps and log to remote
+#test the remote path in terminal on a comp to make sure you have rw rights to the directory first
+#ran with a rmm
+
 $report_file_unc = ""
 
 try {
